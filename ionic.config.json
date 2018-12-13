@@ -1,0 +1,7 @@
+{
+  "name": "smartfrenmapping",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

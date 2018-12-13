@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input required type="text" [(ngModel)]="infosignup.username" placeholder="Username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input required type="text" [(ngModel)]="infosignup.email" placeholder="Email Address"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input required type="password" [(ngModel)]="infosignup.password" placeholder="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input required type="text" [(ngModel)]="infosignup.role" placeholder="Role"></ion-input>
+  </ion-item>
+  <ion-button shape="round"  color="primary" fill="outline" (click)="signup()">Sign up</ion-button>
+  <ion-button shape="round" href="login" color="primary" fill="outline">Back to Login</ion-button>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input required type="text" [(ngModel)]="infologin.username" placeholder="Username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input required type="password" [(ngModel)]="infologin.password" placeholder="Password"></ion-input>
+  </ion-item>
+  <ion-button shape="round"  color="primary" fill="outline" (click)="login()">Login</ion-button>
+  <ion-button shape="round" href="signup" color="primary" fill="outline">Sign up</ion-button>
+
+
+</ion-content>

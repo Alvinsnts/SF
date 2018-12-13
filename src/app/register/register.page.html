@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input required type="text" placeholder="username" {[ngModel]}="registerData.username"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input required type="text" placeholder="email" {[ngModel]}="registerData.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input required type="text" placeholder="role" {[ngModel]}="registerData.role"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input required type="password" placeholder="password" {[ngModel]}="registerData.password"></ion-input>
+  </ion-item>
+  
+  <ion-button shape="round" size="full" color="primary" href="login">Register</ion-button>
+  <ion-button shape="round" size="full" color="primary" href="login">Back to Login Screen</ion-button>
+
+
+</ion-content>
