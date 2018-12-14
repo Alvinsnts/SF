@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>addproduct</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-title>Add Product</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <ion-item>
+      <ion-input required type="text" [(ngModel)]="productinfo.productname" placeholder="Product Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="text" [(ngModel)]="productinfo.productprice"  placeholder="Product Price"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-input required type="text" [(ngModel)]="productinfo.producttype" placeholder="Product Type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="text" [(ngModel)]="productinfo.productdetail"  placeholder="Product Detail"></ion-input>
+    </ion-item>
+    <ion-button shape="round"  color="primary" fill="outline" (click)="addproduct()">Add Product</ion-button>
+    <ion-button shape="round" href="home" color="primary" fill="outline">Back to Homescreen</ion-button>
+  
+  </ion-content>
+  
