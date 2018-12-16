@@ -13,5 +13,8 @@ export class SetupService {
   postdata(url, credential){
     return this.http.post(`${apiUrl}/${url}`, JSON.stringify(credential), {});
   }
+  uploadImage(url,credentials){
+    return this.http.post(`${apiUrl}/${url}`, credentials, {});
+  }
 }
 

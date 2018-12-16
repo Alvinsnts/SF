@@ -8,18 +8,7 @@
     
     <h3 *ngIf="images.length == 0 " text-center>Please select image</h3>
     <ion-list>
-      <ion-item *ngFor="let img of images; index as pos" text-wrap>
-        <ion-thumbnail slot="start">
-            <ion-img [src]="img.path"></ion-img>
-        </ion-thumbnail>
-        <ion-label>{{ img.name }}</ion-label>
-    <ion-button slot="end" fill="clear" (click)="startUpload(img)">
-      <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
-    </ion-button>
-    <ion-button slot="end" fill="clear" (click)="deleteImage(img, pos)">
-      <ion-icon slot="icon-only" name="trash"></ion-icon>
-    </ion-button>
-    </ion-item>
+        <ion-img [src]="images.convertedImagePath"></ion-img>
     </ion-list>
 
 
@@ -36,6 +25,7 @@
       <ion-input required type="text" [(ngModel)]="productinfo.productdetail"  placeholder="Product Detail"></ion-input>
     </ion-item>
     <ion-button shape="round"  color="primary" fill="outline" (click)="addproduct()">Add Product</ion-button>
+    <ion-button shape="round"  color="primary" fill="outline" (click)="startUpload()">Upload Photo</ion-button>
     <ion-button shape="round" href="home" color="primary" fill="outline">Back to Homescreen</ion-button>
   
   </ion-content>
