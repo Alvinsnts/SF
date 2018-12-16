@@ -103,6 +103,7 @@ export class AddproductPage implements OnInit {
  
     this.camera.getPicture(options).then(imagePath => {
         var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
+        //var currentName = currentName.substr(0,currentName.indexOf("?") - 1);
         var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
         this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
     });
@@ -117,8 +118,15 @@ export class AddproductPage implements OnInit {
  
   copyFileToLocalDir(namePath, currentName, newFileName) {
     this.file.copyFile(namePath, currentName, this.file.dataDirectory, newFileName).then(success => {
+        console.log(namePath);
+        console.log(currentName);
+        console.log(newFileName);  
         this.updateStoredImages(newFileName);
     }, error => {
+        console.log(error);
+        console.log(namePath);
+        console.log(currentName);
+        console.log(newFileName);
         this.presentToast('Error while storing file.');
     });
   }
